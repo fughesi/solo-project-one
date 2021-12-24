@@ -12,6 +12,7 @@
 
   /* sizes */
   --tiny: .625rem;
+  --pico: .8rem;
   --small: .8875rem;
   --big: 1.5625rem;
   --icon: 25px;
@@ -37,7 +38,6 @@
 
   font-family: 'Inter', sans-serif; 
 }
-
 #container {
   display: grid;
   grid-template-columns: 15% 70% 15%;
@@ -47,7 +47,7 @@
     "c c c";
 
   width: 317px;
-  height: 716px;
+  height: 710px;
 
   border-radius: 15px 15px 0 0;
   
@@ -89,13 +89,12 @@
   color: var(--gold);
   text-align: center;
 
-  font-size: var(--small);
+  font-size: var(--pico);
   font-weight: var(--thin);
   letter-spacing: -.03em;
 }
 #mainContainer main a {
-  justify-self: center;
-  padding: .75em;
+  padding: .75em .75em 1.55em;
   
   font-size: var(--tiny);
   color: var(--light);
@@ -105,7 +104,7 @@
   justify-content: space-between;
 }
 #buttons a { 
-  align-items: center;
+  display: flex;
   border-radius: 5px;
   padding: 7px 15px;
   background: var(--light);
@@ -121,11 +120,11 @@
    padding-right: .5em;
  }
 #text {
-  font-size: var(--tiny);
-  font-weight: var(--thin);
-  letter-spacing: .1em;
-  line-height: 1.2em;
+  margin: 1.25em 0 1.3em 0;
+
   color: var(--gray);
+  font-weight: var(--thin);
+  letter-spacing: .11em;
 }
 #text h6 {
   margin: 1em 0 0 0;
@@ -135,7 +134,10 @@
   color: var(--light);
 }
 #text p {
-  font-variant: small-caps;
+  margin: .75em 0;
+
+  line-height: 1.2em;
+  font-size: var(--tiny);
 }
 
 /**************
