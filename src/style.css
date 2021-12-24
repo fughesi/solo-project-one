@@ -11,13 +11,137 @@
   --bgDark: #161619;
 
   /* sizes */
-  --tiny: .75rem;
+  --tiny: .625rem;
   --small: .8875rem;
   --big: 1.5625rem;
   --icon: 25px;
-  
+  --smallIcon: 16px;
+
+  /* font weights */
+  --thin: 400;
+  --semiBold: 600;
+  --bold: 700;
 }
-#text {
+
+/**********
+ CONTAINERS 
+ **********/
+ *,
+ *::before,
+ *::after {
+   text-decoration: none;
+ }
+ body {
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Inter', sans-serif; 
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-areas: 
+    "a a a"
+    ". b ."
+    "c c c";
+
+  width: 317px;
+  height: 716px;
+
+  border-radius: 15px 15px 0 0;
+  
   background-color: var(--bgMid);
-  color: white;
+}
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: b;
+}
+#socials {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-area: c;
+  
+  background: var(--bgDark);
+  height: 64px;
+  border-radius: 0 0 15px 15px;
+}
+
+/************
+ MAIN SECTION 
+ ************/
+#mainContainer main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+#mainContainer h3 {
+  margin: .75em 0 .1em 0;
+  font-size: var(--big);
+  color: var(--light);
+  text-align: center;
+}
+#mainContainer h4 {
+  margin: 0;
+  color: var(--gold);
+  text-align: center;
+
+  font-size: var(--small);
+  font-weight: var(--thin);
+  letter-spacing: -.03em;
+}
+#mainContainer main a {
+  justify-self: center;
+  padding: .75em;
+  
+  font-size: var(--tiny);
+  color: var(--light);
+}
+#buttons {
+  display: flex;
+  justify-content: space-between;
+}
+#buttons a { 
+  align-items: center;
+  border-radius: 5px;
+  padding: 7px 15px;
+  background: var(--light);
+  color: var(--bgDark);
+  font-size: var(--small);
+ }
+ #buttons a:nth-child(2) {
+   background: var(--blue);
+   color: var(--light);
+ }
+ #buttons img {
+   height: var(--smallIcon);
+   padding-right: .5em;
+ }
+#text {
+  font-size: var(--tiny);
+  font-weight: var(--thin);
+  letter-spacing: .1em;
+  line-height: 1.2em;
+  color: var(--gray);
+}
+#text h6 {
+  margin: 1em 0 0 0;
+  
+  font-size: var(--small);
+  font-weight: var(--semiBold);
+  color: var(--light);
+}
+#text p {
+  font-variant: small-caps;
+}
+
+/**************
+ FOOTER SECTION 
+ **************/
+#socials img {
+  height: var(--icon);
+  width: var(--icon);
 }
